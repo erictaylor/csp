@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "dictionaries": [
+    "companies",
+    "en_US",
+    "en-gb",
+    "fullstack",
+    "node",
+    "npm",
+    "softwareTerms",
+    "typescript"
+  ],
+  "ignoreRegExpList": [
+    "/.*[0-9].*/"
+  ],
+  "language": "en",
+  "minWordLength": 5,
+  "words": [
+    "erictaylor",
+    "styleguide"
+  ]
+}
