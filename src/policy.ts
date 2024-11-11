@@ -78,7 +78,7 @@ export type PolicyDirectiveList = readonly PolicyDirectiveTuple[];
  *   [Directive.ScriptSrc, KeywordValue.Self, UnsafeKeywordValue.UnsafeInline],
  * );
  *
- * assertEquals(policies, script-src 'self' 'unsafe-inline'; "default-src 'self'");
+ * assertEquals(policies, "script-src 'self' 'unsafe-inline'; default-src 'self'");
  * ```
  */
 export function formatPolicyDirectiveList(

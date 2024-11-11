@@ -34,7 +34,7 @@ jobs:
         run: deno test --coverage=coverage/
 
       - name: '[Docs] Lint'
-        run: deno doc --lint
+        run: deno doc --lint src/mod.ts
 
       - name: '[Docs] Test'
         run: deno test --doc
