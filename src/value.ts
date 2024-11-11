@@ -1,4 +1,4 @@
-import { HASH_ALGORITHMS, type HashAlgorithm } from './_constants.ts';
+import { HASH_ALGORITHMS, type HashAlgorithm } from './constants.ts';
 import type { RemoveDashes } from './_type-helpers.ts';
 
 export enum KeywordValue {
@@ -88,7 +88,8 @@ export type HostValue = string;
  */
 export type NonceValue = `'nonce-${string}'`;
 
-type FormattedHashAlgorithm = Lowercase<RemoveDashes<HashAlgorithm>>;
+/** CSP hash prefixes */
+export type FormattedHashAlgorithm = Lowercase<RemoveDashes<HashAlgorithm>>;
 
 /**
  * A valid formatted CSP hash value.

@@ -7,6 +7,7 @@
  */
 
 export * from './config.ts';
+export * from './constants.ts';
 export * from './directive.ts';
 export * from './policy.ts';
 export * from './value.ts';

@@ -47,7 +47,10 @@ export function formatPolicyDirective(
   return `${directive} ${values.map((value) => value.trim()).join(' ')}`;
 }
 
-type PolicyDirectiveTuple = readonly [
+/**
+ * A tuple of a policy directive and its values.
+ */
+export type PolicyDirectiveTuple = readonly [
   directive: Directive,
   ...values: readonly string[],
 ];

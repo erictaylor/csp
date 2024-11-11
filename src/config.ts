@@ -1,4 +1,4 @@
-import type { HashAlgorithm } from './_constants.ts';
+import type { HashAlgorithm } from './constants.ts';
 import { deepFreeze } from './_helpers.ts';
 import {
   formatHashValue,
