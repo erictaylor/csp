@@ -1,14 +1,7 @@
-<!--
-Replace the following placeholders with the actual values:
-- `<% GITHUB_REPO_PATH %>`: GitHub repository path (e.g., `erictaylor/waffle`)
-- `<% GITHUB_REPO_NAME %>`: GitHub repository name (e.g., `waffle`)
-- `<% LIBRARY_BRAND_NAME %>`: Library brand name (e.g., `Waffle`)
--->
-
 # Contributing
 
-<% LIBRARY_BRAND_NAME %> is an open-source project and we welcome contributions
-from the community. Thank you!
+@erictaylor/csp is an open-source project and we welcome contributions from the
+community. Thank you!
 
 Below you can find some guidance on how to be most effective when contributing
 to the project.
@@ -59,35 +52,35 @@ to your own fork of the repository.
   [created an account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
   on GitHub.
 - [Create your own fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-  of [this repository](https://github.com/<% GITHUB_REPO_PATH %>).
+  of [this repository](https://github.com/erictaylor/csp).
 - Clone your fork to your local machine
   ```sh
-  > git clone https://github.com/<your-github-username>/<% GITHUB_REPO_NAME %>
-  > cd <% GITHUB_REPO_NAME %>
+  > git clone https://github.com/<your-github-username>/csp
+  > cd csp
   ```
   You can see that your fork is setup as the `origin` remote repository. Any
   changes you wish to make should be in a local branch that is then pushed to
   this origin remote.
   ```sh
   > git remote -v
-  origin	https://github.com/<your-github-username>/<% GITHUB_REPO_NAME %> (fetch)
-  origin	https://github.com/<your-github-username>/<% GITHUB_REPO_NAME %> (push)
+  origin	https://github.com/<your-github-username>/csp (fetch)
+  origin	https://github.com/<your-github-username>/csp (push)
   ```
-- Add `<% GITHUB_REPO_PATH %>` as the `upstream` remote repository.
+- Add `erictaylor/csp` as the `upstream` remote repository.
   ```sh
-  > git remote add upstream https://github.com/<% GITHUB_REPO_PATH %>
+  > git remote add upstream https://github.com/erictaylor/csp
   > git remote -v
-  origin	https://github.com/<your-github-username>/<% GITHUB_REPO_NAME %> (fetch)
-  origin	https://github.com/<your-github-username>/<% GITHUB_REPO_NAME %> (push)
-  upstream	https://github.com/<% GITHUB_REPO_PATH %> (fetch)
-  upstream	https://github.com/<% GITHUB_REPO_PATH %> (push)
+  origin	https://github.com/<your-github-username>/csp (fetch)
+  origin	https://github.com/<your-github-username>/csp (push)
+  upstream	https://github.com/erictaylor/csp (fetch)
+  upstream	https://github.com/erictaylor/csp (push)
   ```
 - You should regularly pull from the `main` branch of the `upstream` repository
   to keep up to date with the latest changes to the project.
   ```sh
   > git switch main
   > git pull upstream main
-  From https://github.com/<% GITHUB_REPO_PATH %>
+  From https://github.com/erictaylor/csp
   * branch            main       -> FETCH_HEAD
   Already up to date.
   ```
@@ -296,7 +289,7 @@ any features that are not supported in all of them.
 > For example, do not use Node.js-specific APIs in the codebase, as this will
 > break compatibility with the browser and web workers.
 >
-> ```ts
+> ```ts ignore
 > // ❌ Do not use Node.js-specific APIs
 > import { buffer } from 'node:buffer';
 > ```

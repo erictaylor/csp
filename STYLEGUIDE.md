@@ -81,7 +81,7 @@ Whenever you are using interfaces/types that are included in the parameters or
 return type of an exported member, you should export the interface/type that is
 used.
 
-```ts
+```ts ignore
 // my-file.ts
 export interface Person {
   name: string;
@@ -101,7 +101,7 @@ export { createPerson, type Person } from './my-file.ts';
 Much of the time, a simple type alias to an object type acts very similarly to
 an interface.
 
-```ts
+```ts ignore
 interface Foo {
   prop: string;
 }
@@ -139,7 +139,7 @@ creating intersection types.
 Union types are great - they let you express the range of possible values for a
 type.
 
-```ts
+```ts ignore
 interface WeekdaySchedule {
   day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday';
   wake: Time;
@@ -168,7 +168,7 @@ intersecting large unions, where intersecting over each union member can result
 in enormous types that then need to be reduced. One way to avoid this is to use
 subtypes, rather than unions.
 
-```ts
+```ts ignore
 interface Schedule {
   day:
     | 'Monday'
@@ -222,7 +222,7 @@ limited to closures.
 
 Bad:
 
-```ts
+```ts ignore
 export const foo = (): string => {
   return 'foo';
 };
@@ -230,7 +230,7 @@ export const foo = (): string => {
 
 Good:
 
-```ts
+```ts ignore
 export function foo(): string {
   return 'foo';
 }

@@ -1,15 +1,4 @@
-<!--
-Replace the following placeholders with the actual values:
-- `<% LIBRARY_BRAND_NAME %>`: Library brand name (e.g., `Waffle`)
-- `<% LIBRARY_DESCRIPTION %>`: Library description (e.g., `A library for making waffles`)
-- `<% JSR_NAME %>`: JSR name (e.g., `@erictaylor/waffle`)
-
-Make sure to also update the following files as well:
-- `CONTRIBUTING.md`
-- `LICENSE.md`
--->
-
-# <% LIBRARY_BRAND_NAME %>
+# @erictaylor/csp
 
 <% LIBRARY_DESCRIPTION %>
 
@@ -26,20 +15,20 @@ Safari, Firefox, Edge), [Deno](https://deno.com/),
 
 ```bash
 # Deno
-deno add jsr:<% JSR_NAME %>
+deno add jsr:@erictaylor/csp
 # NPM
-npx jsr add <% JSR_NAME %>
+npx jsr add @erictaylor/csp
 # PNPM
-pnpx jsr add <% JSR_NAME %>
+pnpx jsr add @erictaylor/csp
 # Yarn
-yarn dlx jsr add <% JSR_NAME %>
+yarn dlx jsr add @erictaylor/csp
 # Bun
-bunx jsr add <% JSR_NAME %>
+bunx jsr add @erictaylor/csp
 ```
 
 <!-- ### Usage
 
-Please refer to the [documentation](https://jsr.io/<% JSR_NAME %>/doc)
+Please refer to the [documentation](https://jsr.io/@erictaylor/csp/doc)
 for more information on how to use this library. -->
 
 ## Contributing
