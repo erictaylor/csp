@@ -218,6 +218,13 @@ export enum ReportingDirective {
   ReportUri = 'report-uri',
 }
 
+/**
+ * Other directives that do not fall into the other categories.
+ *
+ * Includes experimental directives that are not yet considered
+ * Baseline and are not guaranteed to work in some of the most
+ * widely-used browsers.
+ */
 export enum OtherDirective {
   /**
    * Enforces [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/) at the DOM XSS injection sinks.
@@ -248,6 +255,8 @@ export enum OtherDirective {
 
 /**
  * A Content Security Policy (CSP) directive.
+ * @enum
+ * @ignore
  */
 export const Directive = {
   ...FetchDirective,

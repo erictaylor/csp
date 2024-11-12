@@ -1,6 +1,7 @@
 import { HASH_ALGORITHMS, type HashAlgorithm } from './constants.ts';
 import type { RemoveDashes } from './_type-helpers.ts';
 
+/** General CSP source values */
 export enum KeywordValue {
   /**
    * Allows the inclusion of [speculation rules](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API) in
@@ -20,6 +21,7 @@ export enum KeywordValue {
   StrictDynamic = "'strict-dynamic'",
 }
 
+/** Unsafe CSP source values */
 export enum UnsafeKeywordValue {
   /**
    * Allow use of dynamic code evaluation such as
@@ -40,6 +42,8 @@ export enum UnsafeKeywordValue {
 }
 
 /**
+ * Schema source values.
+ *
  * A scheme such as `http:` or `https:`.
  * Unlike other values, encapsulating in single quotes is not required.
  *
