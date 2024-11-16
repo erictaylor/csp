@@ -1,6 +1,7 @@
 # @erictaylor/csp
 
-<% LIBRARY_DESCRIPTION %>
+A library for working with and configuring Content Security Policy (CSP)
+headers.
 
 ## Getting Started
 
