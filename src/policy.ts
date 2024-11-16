@@ -10,11 +10,11 @@ import { type Directive, sortDirectives } from './directive.ts';
  * @example Usage
  * ```ts
  * import { formatPolicyDirective } from '@erictaylor/csp/policy';
- * import { Directive } from '@erictaylor/csp/directive';
+ * import { FetchDirective } from '@erictaylor/csp/directive';
  * import { KeywordValue } from '@erictaylor/csp/value';
  * import { assertEquals } from '@std/assert';
  *
- * const policy = formatPolicyDirective(Directive.DefaultSrc, KeywordValue.Self);
+ * const policy = formatPolicyDirective(FetchDirective.DefaultSrc, KeywordValue.Self);
  *
  * assertEquals(policy, "default-src 'self'");
  * ```
@@ -22,12 +22,12 @@ import { type Directive, sortDirectives } from './directive.ts';
  * @example Complex Usage
  * ```ts
  * import { formatPolicyDirective } from '@erictaylor/csp/policy';
- * import { Directive } from '@erictaylor/csp/directive';
+ * import { FetchDirective } from '@erictaylor/csp/directive';
  * import { KeywordValue, UnsafeKeywordValue } from '@erictaylor/csp/value';
  * import { assertEquals } from '@std/assert';
  *
  * const policy = formatPolicyDirective(
- *   Directive.ScriptSrc,
+ *   FetchDirective.ScriptSrc,
  *   KeywordValue.Self,
  *   UnsafeKeywordValue.UnsafeInline,
  *   UnsafeKeywordValue.UnsafeEval,
@@ -70,15 +70,15 @@ export type PolicyDirectiveList = readonly PolicyDirectiveTuple[];
  * @example Custom sorting usage
  * ```ts
  * import { formatPolicyDirectiveList } from '@erictaylor/csp/policy';
- * import { Directive } from '@erictaylor/csp/directive';
+ * import { FetchDirective } from '@erictaylor/csp/directive';
  * import { KeywordValue, UnsafeKeywordValue } from '@erictaylor/csp/value';
  * import { assertEquals } from '@std/assert';
  *
  * const policies = formatPolicyDirectiveList(
  *   // Reverse alphabetical sorting
  *   (a, b) => b.localeCompare(a),
- *   [Directive.DefaultSrc, KeywordValue.Self],
- *   [Directive.ScriptSrc, KeywordValue.Self, UnsafeKeywordValue.UnsafeInline],
+ *   [FetchDirective.DefaultSrc, KeywordValue.Self],
+ *   [FetchDirective.ScriptSrc, KeywordValue.Self, UnsafeKeywordValue.UnsafeInline],
  * );
  *
  * assertEquals(policies, "script-src 'self' 'unsafe-inline'; default-src 'self'");
@@ -98,13 +98,13 @@ export function formatPolicyDirectiveList(
  * @example Simple usage
  * ```ts
  * import { formatPolicyDirectiveList } from '@erictaylor/csp/policy';
- * import { Directive } from '@erictaylor/csp/directive';
+ * import { FetchDirective } from '@erictaylor/csp/directive';
  * import { KeywordValue, UnsafeKeywordValue } from '@erictaylor/csp/value';
  * import { assertEquals } from '@std/assert';
  *
  * const policies = formatPolicyDirectiveList(
- *   [Directive.DefaultSrc, KeywordValue.Self],
- *   [Directive.ScriptSrc, KeywordValue.Self, UnsafeKeywordValue.UnsafeInline],
+ *   [FetchDirective.DefaultSrc, KeywordValue.Self],
+ *   [FetchDirective.ScriptSrc, KeywordValue.Self, UnsafeKeywordValue.UnsafeInline],
  * );
  *
  * assertEquals(policies, "default-src 'self'; script-src 'self' 'unsafe-inline'");

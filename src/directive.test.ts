@@ -1,14 +1,24 @@
 import { assertEquals } from '@std/assert';
 import { shuffle } from '@std/random';
 import {
-  Directive,
   DIRECTIVE_SORT_ORDER,
+  DocumentDirective,
+  FetchDirective,
+  NavigationDirective,
+  OtherDirective,
+  ReportingDirective,
   sortDirectives,
 } from './directive.ts';
 
 Deno.test('sortDirectives() sorts directives in custom order', () => {
   const shuffledDirectives = shuffle([
-    ...Object.values(Directive),
+    ...Object.values({
+      ...FetchDirective,
+      ...DocumentDirective,
+      ...NavigationDirective,
+      ...ReportingDirective,
+      ...OtherDirective,
+    }),
   ]);
 
   assertEquals(

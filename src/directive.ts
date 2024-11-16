@@ -253,21 +253,24 @@ export enum OtherDirective {
   UpgradeInsecureRequests = 'upgrade-insecure-requests',
 }
 
-/**
- * A Content Security Policy (CSP) directive.
- * @enum
- * @ignore
- */
-export const Directive = {
-  ...FetchDirective,
-  ...DocumentDirective,
-  ...NavigationDirective,
-  ...ReportingDirective,
-  ...OtherDirective,
-};
+// /**
+//  * A Content Security Policy (CSP) directive.
+//  */
+// export const DIRECTIVE:
+//   & (typeof FetchDirective)
+//   & (typeof DocumentDirective)
+//   & (typeof NavigationDirective)
+//   & (typeof ReportingDirective)
+//   & (typeof OtherDirective) = Object.freeze({
+//     ...FetchDirective,
+//     ...DocumentDirective,
+//     ...NavigationDirective,
+//     ...ReportingDirective,
+//     ...OtherDirective,
+//   });
 
 /**
- * {@linkcode Directive}
+ * A type representing any of the possible CSP directives.
  */
 export type Directive =
   | FetchDirective

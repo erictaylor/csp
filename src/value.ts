@@ -108,7 +108,7 @@ export type HashValue = `'${FormattedHashAlgorithm}-${string}'`;
  * @returns A random nonce value.
  *
  * @example Usage
- * ```ts
+ * ```ts no-assert
  * import { randomNonce } from '@erictaylor/csp/value';
  *
  * randomNonce(); // 'N2U4ZWVlZjktZWU0NC00YWViLThiMDYtODliNmM5ZmM1ZmRl'
