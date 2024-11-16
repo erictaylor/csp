@@ -12,7 +12,7 @@ export type RemoveDashes<S extends string> = S extends `${infer L}-${infer R}`
  * @internal
  *
  * @example
- * ```ts
+ * ```ts ignore
  * type Test = CamelCase<'default-src'>; // 'defaultSrc'
  * ```
  */
@@ -29,7 +29,7 @@ type RemoveQuotes<S extends string> = S extends `'${infer R}'` ? R
  * @internal
  *
  * @example
- * ```ts
+ * ```ts ignore
  * type Test = ConfigKey<"'default-src'">; // 'defaultSrc'
  * ```
  */

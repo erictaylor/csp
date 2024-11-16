@@ -111,7 +111,7 @@ export type HashValue = `'${FormattedHashAlgorithm}-${string}'`;
  * ```ts
  * import { randomNonce } from '@erictaylor/csp/value';
  *
- * const nonce = randomNonce(); // 'N2U4ZWVlZjktZWU0NC00YWViLThiMDYtODliNmM5ZmM1ZmRl'
+ * randomNonce(); // 'N2U4ZWVlZjktZWU0NC00YWViLThiMDYtODliNmM5ZmM1ZmRl'
  * ```
  */
 export function randomNonce(): string {
